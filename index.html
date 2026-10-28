@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KVMP-3 · KaVac Mapping Panel 3rd Edition</title>
+   
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+   
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-expand-lg fixed-top navbar-custom">
+        <div class="container">
+            <a class="navbar-brand" href="#inicio">
+                <!-- Logo del Colegio Kavac -->
+                <img src="img/logo.png" alt="Logo Kavac" style="height: 40px; width: auto;">
+                <span>KVMP-3</span>
+            </a>
+            <button class="navbar-toggler shadow-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <i class="fa-solid fa-bars text-blue"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-1">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problema">Problema</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funciones">Funciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#componentes">Componentes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#disenos">Diseños</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diseno3d">Diseño 3D</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="inicio" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start">
+                    <span class="hero-badge"><i class="fa-solid fa-cube me-2"></i>Proyecto Kavac</span>
+                    <div class="powered-badge mx-auto mx-lg-0">
+                        <i class="fa-solid fa-microchip"></i>
+                        Powered with Arduino Uno
+                    </div>
+                    <h1 class="hero-title">
+                        KVMP-3<br>
+                        <span class="highlight">KaVac Mapping Panel</span><br>
+                        <span style="font-size: 0.6em; font-weight: 600; color: var(--text-muted);">3rd Edition</span>
+                    </h1>
+                    <p class="hero-subtitle mx-auto mx-lg-0">
+                        Una plataforma de rescate compacta y refinada, concebida para adentrarse donde otros no pueden llegar. Con visión térmica, detección ambiental y mapeo inteligente, cada componente ha sido elegido para servir a un propósito: encontrar vida en medio del caos.
+                    </p>
+                    <div class="hero-meta justify-content-center justify-content-lg-start">
+                        <div class="hero-meta-item"><i class="fa-solid fa-camera"></i> Cámara ESP32-CAM MB</div>
+                        <div class="hero-meta-item"><i class="fa-solid fa-compass"></i> 6 motores DC con servorreductores</div>
+                        <div class="hero-meta-item"><i class="fa-solid fa-shield-halved"></i> Chasis metálico de alta calidad</div>
+                    </div>
+                    <a href="#funciones" class="btn btn-primary-custom">
+                        Descubrir funciones <i class="fa-solid fa-arrow-right ms-2"></i>
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image-wrapper">
+                        <img src="img/img1.png" alt="KVMP-3 · Vista frontal del robot de rescate">
+                        <div class="hero-image-caption">
+                            <i class="fa-solid fa-location-dot me-1"></i> Vista frontal · Prototipo KVMP-3
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problema -->
+    <section id="problema" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="problem-box">
+                        <h3><i class="fa-solid fa-triangle-exclamation me-2"></i> El Problema</h3>
+                        <p>
+                            Tras un sismo o inundación, los equipos de rescate enfrentan entornos colapsados, inestables y peligrosos. La "hora de oro" —los primeros 60 minutos— es crucial para encontrar sobrevivientes, pero el acceso a espacios estrechos o zonas con riesgo de derrumbe es limitado para los humanos. Los rescatistas necesitan herramientas que les permitan inspeccionar, mapear y detectar signos de vida sin exponerse innecesariamente. El KVMP-3 nace para responder a esa necesidad: un robot compacto capaz de adentrarse en la zona de desastre, transmitir imágenes en tiempo real, detectar condiciones ambientales adversas y ayudar a trazar un mapa del área, todo con el objetivo de salvar vidas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Funciones (Carrusel Arrastrable) -->
+    <section id="funciones" class="funciones-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Capacidades</span>
+                <h2 class="section-title">Funciones del Robot</h2>
+                <p class="section-desc">
+                    Cada capacidad ha sido pensada para asistir al rescatista con precisión y claridad. La cámara ocupa el lugar central; los sensores complementan su labor.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="carousel-container" id="funcionesCarousel">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="funcion-card active" data-index="0">
+                        <div class="funcion-icon"><i class="fa-solid fa-camera"></i></div>
+                        <h5>Visión en tiempo real</h5>
+                        <p class="funcion-desc">Transmisión de imágenes desde la cámara ESP32-CAM MB.</p>
+                    </div>
+                    <div class="funcion-card" data-index="1">
+                        <div class="funcion-icon"><i class="fa-solid fa-person-walking-arrow-right"></i></div>
+                        <h5>Movimiento automático</h5>
+                        <p class="funcion-desc">Desplazamiento autónomo por entornos desconocidos.</p>
+                    </div>
+                    <div class="funcion-card" data-index="2">
+                        <div class="funcion-icon"><i class="fa-solid fa-gamepad"></i></div>
+                        <h5>Movimiento manual</h5>
+                        <p class="funcion-desc">Control remoto mediante módulo Bluetooth HC-05.</p>
+                    </div>
+                    <div class="funcion-card" data-index="3">
+                        <div class="funcion-icon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                        <h5>Detección de obstáculos</h5>
+                        <p class="funcion-desc">Sensor ultrasónico HC-SR04 para evitar colisiones.</p>
+                    </div>
+                    <div class="funcion-card" data-index="4">
+                        <div class="funcion-icon"><i class="fa-solid fa-map"></i></div>
+                        <h5>Mapeo de ubicación</h5>
+                        <p class="funcion-desc">Trazado del recorrido y registro del entorno.</p>
+                    </div>
+                    <div class="funcion-card" data-index="5">
+                        <div class="funcion-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                        <h5>Temperatura y humedad</h5>
+                        <p class="funcion-desc">Sensor DHT11 para condiciones ambientales.</p>
+                    </div>
+                    <div class="funcion-card" data-index="6">
+                        <div class="funcion-icon"><i class="fa-solid fa-wind"></i></div>
+                        <h5>Detección de gas</h5>
+                        <p class="funcion-desc">Sensor MQ-2 para monóxido y otros gases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cámara destacada -->
+    <section class="py-0" style="padding-top: 0;">
+        <div class="container">
+            <div class="camera-highlight">
+                <div class="camera-icon-big"><i class="fa-solid fa-camera-retro"></i></div>
+                <h3>La cámara es el corazón del KVMP-3</h3>
+                <p>
+                    La ESP32-CAM MB no es un componente más: es el sentido principal del robot. A través de ella, el rescatista observa lo que el ojo humano no alcanza, guiando cada movimiento y cada decisión. Los sensores ambientales amplían la percepción, pero es la imagen la que cuenta la historia.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Componentes -->
+    <section id="componentes">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Hardware</span>
+                <h2 class="section-title">Componentes del Sistema</h2>
+                <p class="section-desc">
+                    Selección cuidadosa de cada pieza, priorizando la fiabilidad y la integración armoniosa.
+                </p>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-microchip"></i></div>
+                        <div class="comp-title">Arduino Uno</div>
+                        <div class="comp-sub">Cerebro del sistema</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-camera"></i></div>
+                        <div class="comp-title">Cámara</div>
+                        <div class="comp-sub">ESP32-CAM MB</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-brands fa-bluetooth-b"></i></div>
+                        <div class="comp-title">Bluetooth</div>
+                        <div class="comp-sub">HC-05</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-satellite-dish"></i></div>
+                        <div class="comp-title">Ultrasónico</div>
+                        <div class="comp-sub">HC-SR04</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-rotate"></i></div>
+                        <div class="comp-title">Servomotor</div>
+                        <div class="comp-sub">90 grados</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-table-cells-large"></i></div>
+                        <div class="comp-title">Expansor de motores</div>
+                        <div class="comp-sub">Control de tracción</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-tv"></i></div>
+                        <div class="comp-title">Pantalla LCD</div>
+                        <div class="comp-sub">I2C 20×4</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="comp-title">Motores DC</div>
+                        <div class="comp-sub">6× con servorreductores</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-battery-full"></i></div>
+                        <div class="comp-title">Batería</div>
+                        <div class="comp-sub">6000 mAh</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                        <div class="comp-title">Panel solar</div>
+                        <div class="comp-sub">Carga auxiliar</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-smog"></i></div>
+                        <div class="comp-title">Sensor de gas</div>
+                        <div class="comp-sub">MQ-2</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                        <div class="comp-title">Temperatura y humedad</div>
+                        <div class="comp-sub">DHT11</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-wave-square"></i></div>
+                        <div class="comp-title">Infrarrojo</div>
+                        <div class="comp-sub">IR FC-51</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-volume-high"></i></div>
+                        <div class="comp-title">Bocina</div>
+                        <div class="comp-sub">Alerta sonora</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                        <div class="comp-title">Linterna LED</div>
+                        <div class="comp-sub">Iluminación de apoyo</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-gear"></i></div>
+                        <div class="comp-title">Ruedas</div>
+                        <div class="comp-sub">6× tracción</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-3">
+                    <div class="component-card">
+                        <div class="comp-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="comp-title">Chasis</div>
+                        <div class="comp-sub">Metálico de alta calidad</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diseños -->
+    <section id="disenos" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Prototipo</span>
+                <h2 class="section-title">Diseños del Prototipo</h2>
+                <p class="section-desc">Vistas estructurales de la plataforma KVMP-3.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="design-card">
+                        <img src="img/img1.png" alt="Diseño frontal KVMP-3">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="design-card">
+                        <img src="img/img2.png" alt="Diseño superior KVMP-3">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="design-card">
+                        <img src="img/img3.png" alt="Diseño perfil KVMP-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diseño 3D -->
+    <section id="diseno3d">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Modelado</span>
+                <h2 class="section-title">Diseño 3D</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-4">
+                    <div class="design-card">
+                        <img src="img/img4.png" alt="Diseño 3D KVMP-3, vista 1">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="design-card">
+                        <img src="img/img5.png" alt="Diseño 3D KVMP-3, vista 2">
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="design-card">
+                        <img src="img/img6.png" alt="Diseño 3D KVMP-3, vista 3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosotros -->
+    <section id="nosotros">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="section-label">Origen</span>
+                    <h2 class="section-title">Colegio Kavac</h2>
+                    <p class="text-muted-custom" style="font-size: 1.05rem; line-height: 1.9;">
+                        El Colegio Kavac posee una trayectoria consolidada en competencias de robótica, habiendo alcanzado el segundo lugar en la edición anterior del torneo. Lejos de conformarnos, decidimos trascender nuestro modelo previo y dar vida a una nueva generación: el KVMP-3. Cada línea de código, cada componente y cada decisión de diseño responde a una búsqueda constante de excelencia y propósito.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo -->
+    <section id="equipo" style="background-color: var(--bg-white);">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Personas</span>
+                <h2 class="section-title">Nuestro Equipo</h2>
+                <p class="section-desc">Las mentes detrás del KVMP-3.</p>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <details class="team-card">
+                        <summary class="team-summary">
+                            <span class="team-avatar">AM</span>
+                            <span class="team-name">ABDALLA MOSBAH</span>
+                            <i class="fa-solid fa-chevron-down team-toggle" aria-hidden="true"></i>
+                        </summary>
+                        <p class="team-description">Responsable del desarrollo web del proyecto, diseñando y programando el sitio que presenta el KVMP-3 al público. Además, junto a Samantha, lideró la fase de planteamiento del problema, identificando la necesidad que el robot busca resolver, y participó activamente en la definición del modelo de negocio, aportando una visión estratégica para que el proyecto fuera viable y sostenible.</p>
+                    </details>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <details class="team-card">
+                        <summary class="team-summary">
+                            <span class="team-avatar">MM</span>
+                            <span class="team-name">MAHMOUD MOSBAH</span>
+                            <i class="fa-solid fa-chevron-down team-toggle" aria-hidden="true"></i>
+                        </summary>
+                        <p class="team-description">Líder del equipo, Mahmoud se encargó de coordinar las distintas áreas del proyecto, asegurando que cada integrante cumpliera con sus tareas y que los plazos se respetaran. Su principal aporte técnico fue el desarrollo del código en Arduino que controla el robot, programando la lógica de movimiento y los sensores que permiten al KVMP-3 funcionar de manera autónoma.</p>
+                    </details>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <details class="team-card">
+                        <summary class="team-summary">
+                            <span class="team-avatar">SL</span>
+                            <span class="team-name">SAMANTHA LEDEZMA</span>
+                            <i class="fa-solid fa-chevron-down team-toggle" aria-hidden="true"></i>
+                        </summary>
+                        <p class="team-description">Lideró las áreas de marketing y modelo de negocio, desarrollando la estrategia de comunicación del proyecto y definiendo cómo el KVMP-3 podría generar valor. Además, trabajó junto a Abdalla en el planteamiento del problema, investigando y estructurando la necesidad que el robot aborda, lo que permitió orientar el diseño y los objetivos del equipo.
+
+</p>
+                    </details>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <details class="team-card">
+                        <summary class="team-summary">
+                            <span class="team-avatar">PD</span>
+                            <span class="team-name">PAVEL DOMINGUEZ</span>
+                            <i class="fa-solid fa-chevron-down team-toggle" aria-hidden="true"></i>
+                        </summary>
+                        <p class="team-description">Se encargó, junto con Ramzi, de toda el área mecánica del robot. Su trabajo incluyó el diseño de la estructura, la selección de materiales y la construcción física del KVMP-3, asegurando que el chasis fuera resistente, funcional y adecuado para las tareas que el robot debía realizar.</p>
+                    </details>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <details class="team-card">
+                        <summary class="team-summary">
+                            <span class="team-avatar">RB</span>
+                            <span class="team-name">RAMZI BECHALANI</span>
+                            <i class="fa-solid fa-chevron-down team-toggle" aria-hidden="true"></i>
+                        </summary>
+                        <p class="team-description">Colaboró estrechamente con Pavel en el desarrollo mecánico del robot, participando en el diseño y la construcción de su estructura. Su trabajo se centró en el ensamblaje y los ajustes necesarios para que el KVMP-3 funcionara correctamente, garantizando la estabilidad y el rendimiento del sistema mecánico.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-custom">
+        <div class="container text-center">
+            <p class="mb-0">
+                &copy; 2026 Colegio Kavac · <span class="fw-semibold text-blue">KVMP-3</span> · KaVac Mapping Panel 3rd Edition
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Personalizado -->
+    <script src="js/main.js"></script>
+</body>
+</html>
